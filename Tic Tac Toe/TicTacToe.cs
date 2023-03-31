@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tic_Tac_Toe
@@ -18,17 +12,32 @@ namespace Tic_Tac_Toe
 
         Label lblScore = new Label();
 
-        string User1;
-        string User2;
+        string playerX;
+        string playerO;
 
+
+        //-----------------------------------------------------------------------------------------------//
         public TicTacToe()
         {
             InitializeComponent();
             intial();
         }
 
+
+        //-----------------------------------------------------------------------------------------------//
+
         private void intial()
         {
+
+
+            this.playerX = PlayerName("X");
+            MessageBox.Show("Hello " + this.playerX + "!");
+
+            this.playerO = PlayerName("O");
+            MessageBox.Show("Hello " + this.playerO + "!");
+
+
+
             for (int i = 0; i < board.GetLength(0); i++)
                 for (int j = 0; j < board.GetLength(1); j++)
                 {
@@ -40,15 +49,65 @@ namespace Tic_Tac_Toe
             drawScore();
         }
 
+
+
+
+        //------------------------------------------------------------------------------------------------------------------------//
+        private string PlayerName(string playingSign)
+        {
+            Form prompt = new Form();
+            prompt.Width = 300;
+            prompt.Height = 150;
+            prompt.Text = $"Player '{playingSign}'";
+
+            Label textLabel = new Label() { Left = 50, Top = 20, Text = $"Player '{playingSign}' enter your name: " };
+            TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 200 };
+            Button confirmation = new Button() { Text = "OK", Left = 150, Width = 50, Top = 80 };
+            confirmation.Click += (sender, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    MessageBox.Show($"Please enter a name for Player '{playingSign}'.");
+                }
+                else
+                {
+                    prompt.Close();
+                }
+            };
+
+            prompt.Controls.Add(textLabel);
+            prompt.Controls.Add(textBox);
+            prompt.Controls.Add(confirmation);
+
+            while (true)
+            {
+                prompt.ShowDialog();
+                if (!string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    return textBox.Text;
+                }
+            }
+        }
+
+
+
+
+        //----------------------------------------------------------------------------------------------------------------------------//
+
         private void drawScore()
         {
             lblScore.Location = new Point(0, 320);
             lblScore.Width = 300;
             lblScore.TextAlign = ContentAlignment.MiddleCenter;
-            lblScore.Text = "'X': 0 - 'O' : 0";
+            lblScore.Text = this.playerX + ": 0 " + this.playerO + " : 0";
             Controls.Add(lblScore);
+            MessageBox.Show("It's a Draw!!!!!");
         }
 
+
+
+
+        //-------------------------------------------------------------------------------------------------------------------------------//
         private void play(object sender, EventArgs e)
         {
             int i = ((Button)sender).Top / 100, j = ((Button)sender).Left / 100;
@@ -76,6 +135,8 @@ namespace Tic_Tac_Toe
             }
         }
 
+
+        //-----------------------------------------------------------------------------------------------------------------------------------//
         private void checkWinner()
         {
             //check rows
@@ -109,14 +170,28 @@ namespace Tic_Tac_Toe
                 win(1, 1);
         }
 
+
+
+        //------------------------------------------------------------------------------------------------------------------------------------------//
         private void win(int i, int j)
         {
-            if (board[i, j].state == States.X) xScore += 1;
-            else oScore += 1;
-            lblScore.Text = "'X' : " + xScore.ToString() + " - 'O' : " + oScore;
+            if (board[i, j].state == States.X)
+            {
+                xScore += 1;
+                MessageBox.Show(this.playerX + " WINS!!");
+            }
+            else
+            {
+                oScore += 1;
+                MessageBox.Show(this.playerO + " WINS!!");
+            }
+
+            lblScore.Text = this.playerX + " : " + xScore.ToString() + "  " + this.playerO + " : " + oScore;
             reset();
         }
 
+
+        //--------------------------------------------------------------------------------------------------------------------------------------------//
         void reset()
         {
             for (int i = 0; i < 3; i++)
@@ -127,6 +202,8 @@ namespace Tic_Tac_Toe
                 }
             role = 0;
         }
+
+        //---------------------------------------------------------------------------------------------------------------------------------------------//
 
     }
 }

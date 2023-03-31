@@ -17,3 +17,14 @@ C:\Users\dkebo\Downloads\Projects-master\Projects-master\C# Projects\08- Tic Tac
 C:\Users\dkebo\Downloads\Projects-master\Projects-master\C# Projects\08- Tic Tac Toe Game\Tic Tac Toe\obj\Debug\Tic Tac Toe.csproj.CoreCompileInputs.cache
 C:\Users\dkebo\Downloads\Projects-master\Projects-master\C# Projects\08- Tic Tac Toe Game\Tic Tac Toe\obj\Debug\Tic Tac Toe.exe
 C:\Users\dkebo\Downloads\Projects-master\Projects-master\C# Projects\08- Tic Tac Toe Game\Tic Tac Toe\obj\Debug\Tic Tac Toe.pdb
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\bin\Debug\Tic Tac Toe.exe.config
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\bin\Debug\Tic Tac Toe.exe
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\bin\Debug\Tic Tac Toe.pdb
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\obj\Debug\Tic Tac Toe.csproj.AssemblyReference.cache
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\obj\Debug\Tic Tac Toe.csproj.SuggestedBindingRedirects.cache
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\obj\Debug\Tic_Tac_Toe.TicTacToe.resources
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\obj\Debug\Tic_Tac_Toe.Properties.Resources.resources
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\obj\Debug\Tic Tac Toe.csproj.GenerateResource.cache
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\obj\Debug\Tic Tac Toe.csproj.CoreCompileInputs.cache
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\obj\Debug\Tic Tac Toe.exe
+C:\Users\dkebo\Source\Repos\marcokebonte\tic-tac-toe\Tic Tac Toe\obj\Debug\Tic Tac Toe.pdb
